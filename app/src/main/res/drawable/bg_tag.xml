@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle">
+
+    <!-- Dải màu từ trái sang phải -->
+    <gradient
+        android:angle="0"
+        android:startColor="#000000"
+        android:endColor="#756200"
+        android:type="linear" />
+
+    <!-- Bo tròn hoàn toàn 2 đầu dạng viên thuốc -->
+    <corners android:radius="100dp" />
+
+</shape>

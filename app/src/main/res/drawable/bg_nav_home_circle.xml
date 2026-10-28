@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- LỚP 1: Viền kính mỏng ngoài cùng phát sáng -->
+    <item>
+        <shape android:shape="oval">
+            <solid android:color="#33FFFFFF" />
+            <stroke
+                android:width="1.5dp"
+                android:color="#B3FFFFFF" />
+        </shape>
+    </item>
+
+    <!-- LỚP 2: Thân quả cầu gradient kính mờ hiệu ứng ngọc trai -->
+    <item
+        android:bottom="1.5dp"
+        android:left="1.5dp"
+        android:right="1.5dp"
+        android:top="1.5dp">
+        <shape android:shape="oval">
+            <gradient
+                android:angle="270"
+                android:centerColor="#D9383244"
+                android:endColor="#FA160F20"
+                android:startColor="#E668607A"
+                android:type="linear" />
+        </shape>
+    </item>
+
+    <!-- LỚP 3: Vệt bóng tối / phản quang ở nửa trên -->
+    <item
+        android:bottom="14dp"
+        android:left="10dp"
+        android:right="10dp"
+        android:top="4dp">
+        <shape android:shape="oval">
+            <gradient
+                android:angle="270"
+                android:centerColor="#66000000"
+                android:endColor="#00000000"
+                android:startColor="#AA150E06"
+                android:type="linear" />
+        </shape>
+    </item>
+
+</layer-list>

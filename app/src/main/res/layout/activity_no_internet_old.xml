@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mainOscar"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_main"
+    android:padding="16dp">
+
+    <com.demo.miniflicks.dramaseries.shortstory.ui.widget.GradientTextViewOscar
+        android:id="@+id/btn_age_confirmOscar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/anton_regular"
+        android:gravity="center"
+        android:paddingHorizontal="8dp"
+        android:paddingVertical="12dp"
+        android:text="@string/no_internet"
+        android:textColor="@color/Orange_50"
+        app:gradientOrientation="topToBottom"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- Center Content -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="16dp"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_age_confirmOscar">
+
+        <!-- Icon / Illustration -->
+        <ImageView
+            android:id="@+id/ivIconOscar"
+            android:layout_width="300dp"
+            android:layout_height="400dp"
+            android:adjustViewBounds="true"
+            android:contentDescription="@null"
+            android:src="@drawable/ic_no_internet" />
+
+        <!-- Title -->
+        <com.demo.miniflicks.dramaseries.shortstory.util.AlwaysMarqueeTextViewOscar
+            android:id="@+id/tvTitleOscar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:fontFamily="@font/inter_18pt_semibold"
+            android:gravity="center"
+            android:text="@string/no_internet_connection"
+            android:textColor="@color/white"
+            android:textSize="20sp" />
+
+        <!-- Description -->
+        <TextView
+            android:id="@+id/tvDescriptionOscar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:lineSpacingExtra="2dp"
+            android:fontFamily="@font/inter_18pt_medium"
+            android:gravity="center"
+            android:text="@string/no_internet_connection_available_due_to_network_or_service_issue_please_check_your_connection_and_reload_the_app"
+            android:textColor="#99FFFFFF"
+            android:textSize="13sp" />
+
+        <!-- Try Again Button -->
+        <com.demo.miniflicks.dramaseries.shortstory.util.AlwaysMarqueeTextViewOscar
+            android:id="@+id/btnTryAgainOscar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/bg_btn_yes"
+            android:fontFamily="@font/inter_18pt_semibold"
+            android:gravity="center"
+            android:minWidth="160dp"
+            android:paddingHorizontal="36dp"
+            android:paddingVertical="14dp"
+            android:text="@string/try_again"
+            android:textColor="@color/white"
+            android:textSize="16sp" />
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

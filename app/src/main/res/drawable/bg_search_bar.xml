@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle">
+    <!-- Màu nền tối của thanh search -->
+    <solid android:color="#0D111A" />
+    <!-- Bo tròn hoàn toàn 2 đầu (Pill shape) -->
+    <corners android:radius="100dp" />
+    <!-- Viền mỏng nhẹ bên ngoài nếu cần -->
+    <stroke
+        android:width="1dp"
+        android:color="#1F2937" />
+</shape>

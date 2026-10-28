@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- LỚP 1: Viền kính ngoài (Viền mỏng bo tròn hoàn toàn dạng viên thuốc) -->
+    <item>
+        <shape android:shape="rectangle">
+            <corners android:radius="100dp" />
+            <stroke
+                android:width="1.2dp"
+                android:color="#3385B5" />
+        </shape>
+    </item>
+
+    <!-- LỚP 2: Lớp nền tối sâu (Deep Dark Blue Base) -->
+    <item
+        android:bottom="1dp"
+        android:left="1dp"
+        android:right="1dp"
+        android:top="1dp">
+        <shape android:shape="rectangle">
+            <corners android:radius="100dp" />
+            <gradient
+                android:angle="270"
+                android:startColor="#142B3F"
+                android:centerColor="#0B1826"
+                android:endColor="#04090E"
+                android:type="linear" />
+        </shape>
+    </item>
+
+    <!-- LỚP 3: Lớp ánh sáng tỏa ở trung tâm (Center Blue Glow tỏa sang 2 bên) -->
+<!--    <item-->
+<!--        android:bottom="1dp"-->
+<!--        android:left="1dp"-->
+<!--        android:right="1dp"-->
+<!--        android:top="1dp">-->
+<!--        <shape android:shape="rectangle">-->
+<!--            <corners android:radius="100dp" />-->
+<!--            <gradient-->
+<!--                android:angle="0"-->
+<!--                android:startColor="#00000000"-->
+<!--                android:centerColor="@color/orange_primary_70"-->
+<!--                android:endColor="#00000000"-->
+<!--                android:type="linear" />-->
+<!--        </shape>-->
+<!--    </item>-->
+
+    <!-- LỚP 4: Vệt sáng bóng mép trên (Top Glass Highlight) -->
+    <item
+        android:height="1.5dp"
+        android:left="30dp"
+        android:right="30dp"
+        android:top="1dp">
+        <shape android:shape="rectangle">
+            <corners android:radius="100dp" />
+            <gradient
+                android:angle="0"
+                android:startColor="#00FFFFFF"
+                android:centerColor="#509DD9"
+                android:endColor="#00FFFFFF"
+                android:type="linear" />
+        </shape>
+    </item>
+
+</layer-list>

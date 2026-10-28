@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/_20sdp"
+        android:background="@drawable/bg_radius_16"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:paddingHorizontal="@dimen/_12sdp"
+        android:paddingTop="@dimen/_20sdp"
+        android:paddingBottom="@dimen/_14sdp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:paddingVertical="@dimen/_12sdp"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/tv_title_quitOscar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:includeFontPadding="false"
+                android:singleLine="true"
+                android:text="@string/quit"
+                android:fontFamily="@font/sf_pro_rounded_bold"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_16ssp" />
+
+            <TextView
+                android:id="@+id/tv_content_quitOscar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_8sdp"
+                android:gravity="center"
+                android:includeFontPadding="false"
+                android:fontFamily="@font/plusjakartasans_medium"
+                android:text="@string/are_you_sure_want_to_quit_app"
+                android:textColor="#CCFFFFFF"
+                android:textSize="@dimen/_11ssp" />
+        </LinearLayout>
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_12sdp"
+            android:orientation="horizontal"
+            android:layout_marginTop="@dimen/_28sdp">
+
+                <TextView
+                    android:id="@+id/btn_cancel_quit_appOscar"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:background="@drawable/bg_16"
+                    android:backgroundTint="#593500"
+                    android:paddingVertical="12dp"
+                    android:layout_centerInParent="true"
+                    android:layout_marginVertical="@dimen/_8sdp"
+                    android:ellipsize="end"
+                    android:includeFontPadding="false"
+                    android:singleLine="true"
+                    android:text="@string/no"
+                    android:layout_marginEnd="24dp"
+                    android:fontFamily="@font/outfit_medium"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_10ssp" />
+
+
+
+                <TextView
+                    android:id="@+id/btn_quit_appOscar"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:layout_centerInParent="true"
+                    android:layout_marginVertical="@dimen/_8sdp"
+                    android:ellipsize="end"
+                    android:background="@drawable/bg_btn_yes"
+                    android:paddingVertical="12dp"
+                    android:includeFontPadding="false"
+                    android:singleLine="true"
+                    android:text="@string/yes"
+                    android:fontFamily="@font/outfit_medium"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_10ssp" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="GradientTextView">
+        <!-- Màu bắt đầu của gradient -->
+        <attr name="startColor" format="color" />
+        <!-- Màu kết thúc của gradient -->
+        <attr name="endColor" format="color" />
+        <!-- Hướng dải màu chuyển động -->
+        <attr name="gradientOrientation" format="enum">
+            <enum name="leftToRight" value="0" />
+            <enum name="bottomToTop" value="1" />
+            <enum name="topToBottom" value="2" />
+            <enum name="rightToLeft" value="3" />
+        </attr>
+    </declare-styleable>
+</resources>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_horizontal"
+    android:layout_marginHorizontal="4dp"
+    android:layout_marginBottom="8dp"
+    android:backgroundTint="#5C090A0C"
+    android:background="@drawable/bg_8">
+
+    <TextView
+        android:id="@+id/tv_numberOscar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="1"
+        android:gravity="center"
+        android:fontFamily="@font/inter_18pt_semibold"
+        android:textColor="@color/white"
+        android:textSize="14sp"
+        android:padding="4dp"
+        android:visibility="visible" />
+    <ImageView
+        android:id="@+id/iv_lockOscar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:paddingVertical="6dp"
+        android:visibility="gone"
+        android:src="@drawable/ic_lock"/>
+
+</LinearLayout>

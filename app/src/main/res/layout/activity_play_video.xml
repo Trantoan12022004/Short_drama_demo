@@ -1,0 +1,487 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <ImageView
+        android:id="@+id/ivScreenBackgroundOscar"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:scaleType="centerCrop"
+        android:contentDescription="@null"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvEpisodesOscar"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+
+        <FrameLayout
+            android:id="@+id/btnReplay10Oscar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_glass_circle"
+            android:visibility="gone"
+            android:layout_marginEnd="36dp"
+            android:contentDescription="@null">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="12dp"
+                android:src="@drawable/replay_10" />
+        </FrameLayout>
+
+        <!-- Nút play ở giữa màn hình, hiện khi video đang pause -->
+        <FrameLayout
+            android:id="@+id/ivCenterPlayOscar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_glass_circle"
+            android:visibility="gone"
+            android:layout_marginEnd="36dp"
+            android:contentDescription="@null">
+
+            <ImageView
+                android:id="@+id/iv_pause_playOscar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="12dp"
+                android:src="@drawable/play_arrow1" />
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/btnForward10Oscar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_glass_circle"
+            android:visibility="gone"
+            android:contentDescription="@null">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="12dp"
+                android:src="@drawable/forward_10" />
+        </FrameLayout>
+    </LinearLayout>
+
+
+
+    <FrameLayout
+        android:id="@+id/glassToolbarOscar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:padding="8dp"
+        android:background="@drawable/bg_100"
+        android:backgroundTint="@color/Background_Nav_White"
+        android:layout_margin="@dimen/_12sdp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <!-- Nội dung bên trong thanh công cụ -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:paddingHorizontal="8dp">
+
+            <!-- Nút Back -->
+            <ImageView
+                android:id="@+id/btnBackOscar"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:background="@drawable/bg_btn_cirle"
+                android:backgroundTint="@color/Background_Nav_White"
+                android:src="@drawable/chevron_backward" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+                <!-- Tiêu đề -->
+                <com.demo.miniflicks.dramaseries.shortstory.util.AlwaysMarqueeTextViewOscar
+                    android:id="@+id/toolbarTitleOscar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingStart="12dp"
+                    android:paddingEnd="12dp"
+                    android:gravity="center"
+                    android:text="Skrill and Iso"
+                    android:textColor="#FFFFFF"
+                    android:textSize="18sp"
+                    android:fontFamily="@font/anton_regular" />
+
+                <TextView
+                    android:id="@+id/tvEpisodeNameIndexOscar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Episode 2/12"
+                    android:gravity="center"
+                    android:fontFamily="@font/inter_18pt_semibold"
+                    android:textColor="@android:color/white"
+                    android:textSize="14sp" />
+
+            </LinearLayout>
+
+
+
+            <!-- Nút Yêu thích -->
+            <ImageView
+                android:id="@+id/btnFavoriteOscar"
+                android:padding="12dp"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:background="@drawable/bg_btn_cirle"
+                android:backgroundTint="@color/Background_Nav_White"
+                android:src="@drawable/boxicons_heart_filled" />
+
+        </LinearLayout>
+
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/bottomOverlayOscar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:visibility="visible"
+        android:background="@drawable/bg_glass_16_clear"
+        android:layout_margin="@dimen/_12sdp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="12dp"
+                android:orientation="horizontal">
+                <!-- Seek bar -->
+                <SeekBar
+                    android:id="@+id/seekBarOscar"
+                    android:layout_width="0dp"
+                    android:layout_height="8dp"
+                    android:layout_weight="1"
+                    android:paddingStart="4dp"
+                    android:paddingEnd="4dp"
+                    android:paddingTop="0dp"
+                    android:paddingBottom="0dp"
+                    android:layout_marginEnd="12dp"
+                    android:max="100"
+                    android:progress="0"
+                    android:progressDrawable="@drawable/bg_seekbar_track"
+                    android:thumb="@drawable/bg_seekbar_thumb"
+                    android:splitTrack="false"
+                    android:background="@null"
+                    android:layout_gravity="center_vertical" />
+
+                <!-- Time -->
+                <TextView
+                    android:id="@+id/tvCurrentTimeOscar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="04:58"
+                    android:textColor="@android:color/white"
+                    android:fontFamily="@font/inter_18pt_medium"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="/"
+                    android:textColor="@android:color/white"
+                    android:fontFamily="@font/inter_18pt_medium"
+                    android:textSize="12sp" />
+
+                    <TextView
+                        android:id="@+id/tvTotalTimeOscar"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="end"
+                        android:text="04:58"
+                        android:textColor="@android:color/white"
+                        android:fontFamily="@font/inter_18pt_medium"
+                        android:textSize="12sp" />
+            </LinearLayout>
+            <!-- Nhóm 1: thông tin tập + icon -->
+            <LinearLayout
+                android:id="@+id/groupEpisodeInfoOscar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+                    <ImageView
+                        android:id="@+id/btnEpisodeListOscar"
+                        android:layout_width="0dp"
+                        android:layout_height="24dp"
+                        android:layout_weight="1"
+                        android:layout_marginEnd="16dp"
+                        android:src="@drawable/ic_list_numbered"
+                        android:contentDescription="@null" />
+
+                    <ImageView
+                        android:id="@+id/btnSubtitleOscar"
+                        android:layout_width="0dp"
+                        android:layout_height="24dp"
+                        android:layout_weight="1"
+                        android:layout_marginEnd="16dp"
+                        android:src="@drawable/ic_subtitles"
+                        android:contentDescription="@null" />
+
+                    <ImageView
+                        android:id="@+id/btnSpeedOscar"
+                        android:layout_width="0dp"
+                        android:layout_height="24dp"
+                        android:layout_weight="1"
+                        android:layout_marginEnd="16dp"
+                        android:src="@drawable/ic_speed"
+                        android:contentDescription="@null" />
+
+                    <ImageView
+                        android:id="@+id/btnQualityOscar"
+                        android:layout_width="0dp"
+                        android:layout_height="24dp"
+                        android:layout_weight="1"
+                        android:src="@drawable/ic_tune"
+                        android:contentDescription="@null" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <!-- Nhóm chọn tốc độ -->
+            <LinearLayout
+                android:id="@+id/groupSpeedOptionsOscar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:visibility="gone">
+
+                <!-- 1.0x -->
+                <TextView
+                    android:id="@+id/btnSpeed1xOscar"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:paddingVertical="4dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="1.0x"
+                    android:layout_marginEnd="8dp"
+                    android:textSize="12sp"
+                    android:textColor="@color/white"
+                    android:fontFamily="@font/inter_18pt_semibold" />
+
+                <TextView
+                    android:id="@+id/btnSpeed125xOscar"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:paddingVertical="4dp"
+                    android:layout_weight="1"
+                    android:layout_marginEnd="8dp"
+                    android:gravity="center"
+                    android:text="1.25x"
+                    android:textSize="12sp"
+                    android:textColor="@color/white"
+                    android:fontFamily="@font/inter_18pt_semibold" />
+
+                <TextView
+                    android:id="@+id/btnSpeed15xOscar"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:paddingVertical="4dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="1.5x"
+                    android:layout_marginEnd="8dp"
+                    android:textSize="12sp"
+                    android:textColor="@color/white"
+                    android:fontFamily="@font/inter_18pt_semibold" />
+
+                <TextView
+                    android:id="@+id/btnSpeed20xOscar"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:paddingVertical="4dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="2.0x"
+                    android:textSize="12sp"
+                    android:textColor="@color/white"
+                    android:fontFamily="@font/inter_18pt_semibold" />
+
+
+            </LinearLayout>
+
+            <!-- Nhóm 3: chọn chất lượng -->
+            <LinearLayout
+                android:id="@+id/groupQualityOptionsOscar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:visibility="gone">
+                <!-- 1.0x -->
+                <TextView
+                    android:id="@+id/btn_2kOscar"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:paddingVertical="4dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="1440p"
+                    android:layout_marginEnd="8dp"
+                    android:textSize="12sp"
+                    android:textColor="@color/white"
+                    android:fontFamily="@font/inter_18pt_semibold" />
+
+                <TextView
+                    android:id="@+id/btn_fullhdOscar"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:paddingVertical="4dp"
+                    android:layout_weight="1"
+                    android:layout_marginEnd="8dp"
+                    android:gravity="center"
+                    android:text="1080p"
+                    android:textSize="12sp"
+                    android:textColor="@color/white"
+                    android:fontFamily="@font/inter_18pt_semibold" />
+
+                <TextView
+                    android:id="@+id/btn_hdOscar"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:paddingVertical="4dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="720p"
+                    android:layout_marginEnd="8dp"
+                    android:textSize="12sp"
+                    android:textColor="@color/white"
+                    android:fontFamily="@font/inter_18pt_semibold" />
+
+                <TextView
+                    android:id="@+id/btn_540Oscar"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:paddingVertical="4dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="540p"
+                    android:layout_marginEnd="8dp"
+                    android:textSize="12sp"
+                    android:textColor="@color/white"
+                    android:fontFamily="@font/inter_18pt_semibold" />
+
+                <TextView
+                    android:id="@+id/btn_360Oscar"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:paddingVertical="4dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="360p"
+                    android:textSize="12sp"
+                    android:textColor="@color/white"
+                    android:fontFamily="@font/inter_18pt_semibold" />
+            </LinearLayout>
+
+
+
+
+        </LinearLayout>
+
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/subTitleOscar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="visible"
+        android:background="@drawable/bg_glass_16_clear"
+        android:layout_margin="@dimen/_12sdp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/bottomOverlayOscar">
+        <TextView
+            android:id="@+id/tv_subOscar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textSize="16sp"
+            android:padding="4dp"
+            android:textColor="@color/white"
+            android:fontFamily="@font/inter_18pt_medium" />
+    </FrameLayout>
+    <FrameLayout
+        android:id="@+id/bottomEpisodeOscar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_glass_16_regular"
+        android:layout_margin="@dimen/_12sdp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constrainedHeight="true"
+        app:layout_constraintHeight_max="280dp"
+        android:visibility="gone">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="8dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/select_an_episode"
+                android:layout_marginBottom="8dp"
+                android:textColor="@android:color/white"
+                android:textSize="16sp"
+                android:fontFamily="@font/inter_18pt_medium" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvEpisodeNumbersOscar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:nestedScrollingEnabled="true"
+                app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+                tools:listitem="@layout/item_number"
+                app:spanCount="6" />
+        </LinearLayout>
+    </FrameLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

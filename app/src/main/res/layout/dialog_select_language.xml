@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_radius_32"
+    android:layout_marginHorizontal="46dp"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/select_language"
+            android:textColor="@android:color/white"
+            android:textSize="20dp"
+            android:fontFamily="@font/sf_pro_rounded_bold"/>
+
+        <ImageView
+            android:id="@+id/btnCloseOscar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:src="@drawable/ic_close"
+            android:contentDescription="@null" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/containerOptionsOscar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:orientation="vertical">
+        <LinearLayout
+            android:id="@+id/sub_enOscar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <ImageView
+                android:id="@+id/rbEnglishOscar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/_12sdp"
+                android:background="@null"
+                android:src="@drawable/ic_radio_unchecked" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/english"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                android:fontFamily="@font/inter_18pt_semibold" />
+
+
+        </LinearLayout>
+        <TextView
+            android:id="@+id/btn_doneOscar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginHorizontal="80dp"
+            android:text="@string/done"
+            android:textSize="16sp"
+            android:textColor="@color/white"
+            android:padding="12dp"
+            android:gravity="center"
+            android:layout_marginTop="24dp"
+            android:fontFamily="@font/inter_18pt_semibold"
+            android:background="@drawable/gradient_cam"/>
+    </LinearLayout>
+</LinearLayout>

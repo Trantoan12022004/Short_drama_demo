@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <color name="color_3A5EA3">#3A5EA3</color>
+
+    <color name="color_main">#3A5EA3</color>
+
+    <color name="primary_100">#FFFFFFFF</color>
+    <color name="primary_99">#FDFBFF</color>
+    <color name="primary_98">#F6F3FF</color>
+    <color name="primary_95">#E8EEFF</color>
+    <color name="primary_90">#D3E3FF</color>
+    <color name="primary_80">#A9C7FF</color>
+    <color name="primary_70">#7B9DFF</color>
+    <color name="primary_60">#5C8CFF</color>
+    <color name="primary_50">#3A5EA3</color>
+    <color name="primary_40">#2F4F8A</color>
+    <color name="primary_35">#28467A</color>
+    <color name="primary_30">#213D6B</color>
+    <color name="primary_25">#1B345C</color>
+    <color name="primary_20">#152B4D</color>
+    <color name="primary_10">#0B1830</color>
+    <color name="primary_5">#050C1A</color>
+    <color name="primary_0">#000000</color>
+
+    <color name="glass_bg_clear">#40000000</color>
+    <color name="glass_bg_regular">#66000000</color>
+    <color name="glass_stroke">#33FFFFFF</color>
+    <color name="orange_primary_70">#F5852B</color>
+
+    <!-- Màu nền thanh điều hướng tối -->
+    <color name="nav_bg_color">#1A1124</color>
+    <!-- Màu quả cầu tròn nổi (FAB) -->
+    <color name="nav_fab_color">#383244</color>
+    <!-- Màu vàng sáng cho icon khi được chọn -->
+    <color name="nav_yellow">#FEE500</color>
+    <color name="Yellow">#FCC434</color>
+    <color name="Yellow_40">#D9D900</color>
+    <color name="Orange_40">#D98001</color>
+    <color name="Orange_50">#FF9601</color>
+    <color name="Background_Nav_White">#1FFFFFFF</color>
+
+
+
+    <!-- Màu cho thanh Navigation Playlist -->
+    <color name="nav_pill_bg">#292215</color>
+    <color name="nav_pill_selected_bg">#1E1A11</color>
+    <color name="nav_pill_stroke">#3D3627</color>
+    <color name="nav_pill_unselected">#808080</color>
+    <color name="nav_pill_yellow">#FFFF00</color>
+
+
+</resources>

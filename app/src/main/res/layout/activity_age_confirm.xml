@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mainOscar"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_main"
+    android:padding="16dp">
+
+
+    <com.demo.miniflicks.dramaseries.shortstory.ui.widget.GradientTextViewOscar
+        android:id="@+id/btn_age_confirmOscar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/anton_regular"
+        android:gravity="center"
+        android:text="@string/age_confirm"
+        android:textSize="20sp"
+        app:endColor="#F12711"
+        app:gradientOrientation="topToBottom"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:startColor="#FE8C00" />
+
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_age_confirmOscar">
+        <ImageView
+            android:layout_width="300dp"
+            android:layout_height="400dp"
+            android:layout_gravity="center_horizontal"
+            android:src="@drawable/ic_age" />
+
+        <com.demo.miniflicks.dramaseries.shortstory.util.AlwaysMarqueeTextViewOscar
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:gravity="center"
+            android:fontFamily="@font/inter_18pt_semibold"
+            android:text="@string/are_you_old_enough"
+            android:textColor="@color/white"
+            android:textSize="20sp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/inter_18pt_semibold"
+            android:layout_marginTop="4dp"
+            android:gravity="center"
+            android:text="@string/you_must_be_older_than_12_years_old_to_access_these_contents_please_confirm_your_age"
+            android:textColor="#99FFFFFF" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:orientation="horizontal">
+
+            <com.demo.miniflicks.dramaseries.shortstory.util.AlwaysMarqueeTextViewOscar
+                android:id="@+id/btnDenyOscar"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:layout_weight="1"
+                android:fontFamily="@font/inter_18pt_semibold"
+                android:background="@drawable/bg_btn_no"
+                android:gravity="center"
+                android:padding="13dp"
+                android:text="@string/i_m_not_12_yet"
+                android:textColor="@color/white" />
+
+            <com.demo.miniflicks.dramaseries.shortstory.util.AlwaysMarqueeTextViewOscar
+                android:id="@+id/btnAgreeOscar"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_weight="1"
+                android:fontFamily="@font/inter_18pt_semibold"
+                android:background="@drawable/bg_btn_yes"
+                android:gravity="center"
+                android:padding="13dp"
+                android:text="@string/i_m_older_than_12"
+                android:textColor="@color/white" />
+        </LinearLayout>
+
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

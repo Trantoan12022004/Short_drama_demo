@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginEnd="16dp">
+
+    <!-- Poster cắt chéo -->
+    <com.demo.miniflicks.dramaseries.shortstory.ui.widget.DiagonalImageViewOscar
+        android:id="@+id/ivCardMovieOscar"
+        android:layout_width="120dp"
+        android:layout_height="0dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/card_demo"
+        app:layout_constraintDimensionRatio="3:4"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- Vòng xoay loading khi ảnh chưa tải xong -->
+    <ProgressBar
+        android:id="@+id/pbLoadingOscar"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:indeterminate="true"
+        android:indeterminateTint="@color/white"
+        android:visibility="gone"
+        app:layout_constraintTop_toTopOf="@id/ivCardMovieOscar"
+        app:layout_constraintBottom_toBottomOf="@id/ivCardMovieOscar"
+        app:layout_constraintStart_toStartOf="@id/ivCardMovieOscar"
+        app:layout_constraintEnd_toEndOf="@id/ivCardMovieOscar" />
+
+    <!-- Gradient tối phía dưới -->
+    <View
+        android:id="@+id/viewGradientOscar"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:visibility="gone"
+        android:background="@drawable/bg_black_gradient"
+        app:layout_constraintBottom_toBottomOf="@id/ivCardMovieOscar"
+        app:layout_constraintStart_toStartOf="@id/ivCardMovieOscar"
+        app:layout_constraintEnd_toEndOf="@id/ivCardMovieOscar" />
+
+    <!-- Lượt xem -->
+    <LinearLayout
+        android:id="@+id/llViewCountOscar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="6dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="@id/ivCardMovieOscar"
+        app:layout_constraintBottom_toBottomOf="@id/ivCardMovieOscar">
+
+        <ImageView
+            android:layout_width="12dp"
+            android:layout_height="12dp"
+            android:layout_marginEnd="4dp"
+            android:src="@drawable/ic_play"
+            app:tint="@color/white" />
+
+        <TextView
+            android:id="@+id/tv_count_viewOscar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/inter_18pt_semibold"
+            android:text="696.9K"
+            android:textColor="@color/white"
+            android:textSize="12sp" />
+
+    </LinearLayout>
+
+    <!-- Tên phim -->
+    <com.demo.miniflicks.dramaseries.shortstory.util.AlwaysMarqueeTextViewOscar
+        android:id="@+id/tvMovieTitleOscar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:fontFamily="@font/inter_18pt_semibold"
+        android:ellipsize="marquee"
+        android:singleLine="true"
+        android:text="Movie title"
+        android:textColor="@color/white"
+        android:textSize="12sp"
+        app:layout_constraintStart_toStartOf="@id/ivCardMovieOscar"
+        app:layout_constraintEnd_toEndOf="@id/ivCardMovieOscar"
+        app:layout_constraintTop_toBottomOf="@id/ivCardMovieOscar" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

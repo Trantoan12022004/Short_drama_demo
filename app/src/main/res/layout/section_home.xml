@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:gravity="center"
+    android:orientation="horizontal">
+    <com.demo.miniflicks.dramaseries.shortstory.util.AlwaysMarqueeTextViewOscar
+        android:id="@+id/title_sectionOscar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:textColor="@color/white"
+        android:fontFamily="@font/inter_18pt_medium"
+        android:textSize="20sp"
+        android:text="@string/vibes_with"/>
+
+    <LinearLayout
+        android:id="@+id/btn_see_allOscar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingVertical="6dp"
+        android:paddingStart="12dp"
+        android:paddingEnd="4dp"
+        android:background="@drawable/bg_btn_1000"
+        android:backgroundTint="#1FFFFFFF"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/see_all"
+            android:textSize="16sp"
+            android:layout_marginEnd="8dp"
+            android:textColor="@color/Orange_50"
+            android:fontFamily="@font/inter_18pt_semibold"/>
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:background="@drawable/bg_btn_cirle"
+            android:backgroundTint="#1FFFFFFF"
+            android:src="@drawable/ic_arrow_right"
+            app:tint="@color/Orange_50"/>
+
+    </LinearLayout>
+
+
+
+
+</LinearLayout>

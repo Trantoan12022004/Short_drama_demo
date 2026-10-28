@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingHorizontal="8dp"
+    android:paddingBottom="16dp">
+
+    <!-- Ảnh nền Poster có bo góc, co giãn theo chiều ngang cột (0dp) và giữ tỷ lệ 2:3 -->
+    <com.makeramen.roundedimageview.RoundedImageView
+        android:id="@+id/ivCardMovieOscar"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/card_demo"
+        app:layout_constraintDimensionRatio="2:3"
+        app:riv_corner_radius="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- Vòng xoay loading khi ảnh chưa tải xong -->
+    <ProgressBar
+        android:id="@+id/pbLoadingOscar"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:indeterminate="true"
+        android:indeterminateTint="@color/white"
+        android:visibility="gone"
+        app:layout_constraintTop_toTopOf="@id/ivCardMovieOscar"
+        app:layout_constraintBottom_toBottomOf="@id/ivCardMovieOscar"
+        app:layout_constraintStart_toStartOf="@id/ivCardMovieOscar"
+        app:layout_constraintEnd_toEndOf="@id/ivCardMovieOscar" />
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dp"
+        android:layout_marginEnd="6dp"
+        android:gravity="center"
+        android:paddingHorizontal="6dp"
+        android:background="@drawable/bg_btn_100"
+        app:layout_constraintTop_toTopOf="@id/ivCardMovieOscar"
+        app:layout_constraintEnd_toEndOf="@id/ivCardMovieOscar">
+        <ImageView
+            android:layout_width="12dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="4dp"
+            app:tint="@color/white"
+            android:src="@drawable/ic_play" />
+        <TextView
+            android:id="@+id/tv_count_viewOscar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/inter_18pt_semibold"
+            android:textColor="@color/white"
+            android:textSize="12sp"
+            android:text="999.9K" />
+    </LinearLayout>
+
+    <com.demo.miniflicks.dramaseries.shortstory.util.AlwaysMarqueeTextViewOscar
+        android:id="@+id/tvMovieTitleOscar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:fontFamily="@font/inter_18pt_semibold"
+        android:text="Film Hehehe"
+        android:textColor="@color/white"
+        android:textSize="12sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/ivCardMovieOscar"
+        app:layout_constraintTop_toBottomOf="@id/ivCardMovieOscar" />
+</androidx.constraintlayout.widget.ConstraintLayout>

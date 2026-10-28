@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- Ảnh nền Poster có bo góc -->
+    <com.makeramen.roundedimageview.RoundedImageView
+        android:id="@+id/ivCardMovieOscar"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:contentDescription="@string/cd_movie_poster"
+        android:scaleType="centerCrop"
+        android:src="@drawable/card_demo"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:riv_corner_radius="16dp" />
+
+    <!-- Lớp phủ mờ đen cho banner phụ khi không ở tâm -->
+    <View
+        android:id="@+id/viewDimOverlayOscar"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/bg_dim_overlay"
+        android:alpha="0"
+        android:clickable="false"
+        android:focusable="false"
+        app:layout_constraintBottom_toBottomOf="@+id/ivCardMovieOscar"
+        app:layout_constraintEnd_toEndOf="@+id/ivCardMovieOscar"
+        app:layout_constraintStart_toStartOf="@+id/ivCardMovieOscar"
+        app:layout_constraintTop_toTopOf="@+id/ivCardMovieOscar" />
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingVertical="4dp"
+        android:paddingHorizontal="8dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal"
+        app:layout_constraintStart_toStartOf="@+id/ivCardMovieOscar"
+        app:layout_constraintTop_toTopOf="@+id/ivCardMovieOscar"
+        android:background="@drawable/bg_tag">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/emojione_fire"
+            android:layout_marginEnd="4dp"/>
+        <TextView
+            android:id="@+id/tvTagForYouOscar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/inter_18pt_semibold"
+            android:gravity="center"
+            android:text="@string/tag_for_you"
+            android:textColor="@color/white"
+            android:textSize="12sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <!-- 1. Tag "For You" ở góc trên bên trái -->
+
+
+    <!-- 2. Tag Rating "4.7 ★" ở góc trên bên phải -->
+    <LinearLayout
+        android:id="@+id/layoutRatingOscar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:background="@drawable/bg_btn_100"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingHorizontal="12dp"
+        android:paddingVertical="4dp"
+        app:layout_constraintEnd_toEndOf="@+id/ivCardMovieOscar"
+        app:layout_constraintTop_toTopOf="@+id/ivCardMovieOscar">
+
+        <ImageView
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            android:layout_marginEnd="4dp"
+            android:importantForAccessibility="no"
+            app:tint="@color/Yellow"
+            android:src="@drawable/ic_star" />
+
+        <TextView
+            android:id="@+id/tvRatingOscar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/inter_18pt_semibold"
+            android:textColor="@color/white"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            tools:text="4.7" />
+
+
+    </LinearLayout>
+
+    <!-- 3. Loading Indicator (Hiển thị khi đang tải ảnh/dữ liệu) -->
+    <ProgressBar
+        android:id="@+id/pbLoadingOscar"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:indeterminate="true"
+        android:indeterminateTint="@color/white"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:visibility="visible" />
+
+        <!-- Nút "Watch Now" góc dưới bên trái -->
+    <!-- Nút Trái tim (Favorite) góc dưới bên phải -->
+    <ImageView
+        android:id="@+id/btnFavoriteOscar"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginEnd="12dp"
+        android:layout_marginBottom="12dp"
+        android:contentDescription="@string/cd_favorite"
+        android:background="@drawable/bg_btn_cirle"
+        android:backgroundTint="@color/Background_Nav_White"
+        android:padding="12dp"
+        android:src="@drawable/boxicons_heart_filled"
+        app:tint="@color/Orange_50"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

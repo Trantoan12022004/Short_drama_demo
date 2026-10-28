@@ -1,0 +1,147 @@
+<resources>
+    <string name="app_name">MiniFlicks: Short Drama Series</string>
+
+    <string name="english" translatable="false">English</string>
+    <string name="french" translatable="false">French</string>
+    <string name="portuguese" translatable="false">Portuguese</string>
+    <string name="spanish" translatable="false">Spanish</string>
+    <string name="german" translatable="false">German</string>
+    <string name="hindi" translatable="false">Hindi</string>
+    <string name="indonesia" translatable="false">Indonesia</string>
+    <string name="china" translatable="false">China</string>
+    <string name="watched">視聴しました</string>
+    <string name="Send_Email">メールを送信する</string>
+    <string name="There_is_no">ありません</string>
+    <string name="feedback_failed">フィードバックに失敗しました</string>
+    <string name="app_review_failed">アプリ審査に不合格</string>
+    <string name="thank_you">ありがとう</string>
+    <string name="rate_us">評価してください</string>
+    <string name="not_now">今じゃない</string>
+    <string name="this_action_may_contain_advertising">このアクションには広告が含まれる場合があります</string>
+    <string name="your_opinion_matter_to_us">あなたの意見は私たちにとって重要です</string>
+    <string name="if_you_enjoy_this_know_your_device_would_you_mind_rating_us_on_the_google_play_then">このShortDrama3をお楽しみいただけたなら、Google Playで評価していただけますか？</string>
+    <string name="language">言語</string>
+    <string name="rate">レート</string>
+    <string name="share">共有</string>
+    <string name="privacy_policy">プライバシーポリシー</string>
+    <string name="next">次</string>
+    <string name="quit">アプリを終了しますか？</string>
+    <string name="cancel">キャンセル</string>
+    <string name="continue_">続く</string>
+    <string name="are_you_sure_want_to_quit_app">アプリを終了してもよろしいですか？</string>
+    <string name="please_choose_a_language">言語を選択してください</string>
+    <string name="no_internet_connection">インターネット接続がありません！</string>
+    <string name="title_intro_01">巨大な映画セット</string>
+    <string name="title_intro_02">新作デイリードラマショート</string>
+    <string name="title_intro_03">お気に入りのショートパンツセーバー</string>
+    <string name="title_intro_04">滑らかで高品質</string>
+    <string name="content_intro_01">すぐに再生できる膨大な数の映画コレクション</string>
+    <string name="content_intro_02">毎日楽しめる短編映画</string>
+    <string name="content_intro_03">お気に入りの短編をブックマークに入れてください</string>
+    <string name="content_intro_04">高画質のショート動画をお楽しみください</string>
+    <string name="about">について</string>
+    <string name="feedback">フィードバック</string>
+    <string name="settings">設定</string>
+    <string name="version">バージョン:</string>
+    <string name="choose_language">言語を選択してください</string>
+    <string name="please_select_a_language_to_continue">続行するには言語を選択してください</string>
+    <string name="permission_title">許可</string>
+    <string name="permission_desc">アプリの動作には以下の権限が必要です。</string>
+    <string name="permission_notification">通知</string>
+    <string name="agree_and_continue">同意して続行</string>
+    <string name="permission_memory">メモリへのアクセス</string>
+    <string name="permission_write">設定を書き込む</string>
+    <string name="welcome_back">おかえり</string>
+    <string name="welcome_desc">またお越しいただきありがとうございます。前回中断したところから再開して、旅を続けましょう！</string>
+    <string name="age_comfirm">年齢確認</string>
+    <string name="age_confirm">年齢確認</string>
+    <string name="are_you_old_enough">あなたは十分な年齢ですか？</string>
+    <string name="you_must_be_older_than_12_years_old_to_access_these_contents_please_confirm_your_age">これらのコンテンツにアクセスするには、12歳以上である必要があります。年齢を確認してください。</string>
+    <string name="i_m_not_12_yet">私はまだ12歳になっていません</string>
+    <string name="i_m_older_than_12">私は12歳以上です</string>
+    <string name="age_restriction">年齢制限</string>
+    <string name="oops_this_content_is_not_available">おっと =(( このコンテンツは利用できません</string>
+    <string name="age_restriction_description">お客様は、このコンテンツを閲覧するための最低年齢要件を満たしていないようです。\nご関心をお寄せいただきありがとうございます。しかしながら、このコンテンツは当社の年齢ガイドラインを満たす視聴者のみが閲覧可能です。\n誤って間違ったオプションをクリックされた場合は、戻って再度お試しください。</string>
+    <string name="try_again">もう一度やり直してください</string>
+    <string name="cinemix">シネミックス</string>
+    <string name="playlist">プレイリスト</string>
+    <string name="tag_marriage">＃結婚</string>
+    <string name="tag_forbidden_love">#禁断の愛</string>
+    <string name="tag_celebrity">＃有名人</string>
+    <string name="tag_destiny">＃運命</string>
+    <string name="tag_betrayal">＃裏切り</string>
+    <string name="tag_workplace_romance">#職場恋愛</string>
+    <string name="tag_revenge">＃復讐</string>
+    <string name="tag_fantasy">＃ファンタジー</string>
+    <string name="tag_sweet_love">#甘い愛</string>
+    <string name="tag_action">＃アクション</string>
+    <string name="view">%1$sM</string>
+    <string name="tag_for_you">あなたのために</string>
+    <string name="btn_watch_now">今すぐ視聴</string>
+    <string name="cd_favorite">お気に入り</string>
+    <string name="cd_movie_poster">映画ポスター</string>
+    <string name="search_hint">検索</string>
+    <string name="search_results">検索結果</string>
+    <string name="no_results_found">検索結果が見つかりませんでした</string>
+    <string name="search_error">検索に失敗しました。もう一度お試しください。</string>
+    <string name="select_an_episode">エピソードを選択してください</string>
+    <string name="select_language">言語を選択</string>
+    <string name="done">終わり</string>
+    <string name="episode_locked">エピソードはロックされています</string>
+    <string name="episode_index_format">エピソード %1$d/%2$d</string>
+    <string name="subtitle_off">オフ</string>
+    <string name="hello_blank_fragment">こんにちは、空白の断片</string>
+    <string name="see_all">すべて表示</string>
+    <string name="trending_now">今話題のトピック</string>
+    <string name="new_release">新発売</string>
+    <string name="editor_s_choice">編集者のおすすめ</string>
+    <string name="chiikawa_the_nsecret_of_the_nmermaid_island">千川：人魚島の秘密</string>
+    <string name="play_now">今すぐプレイ</string>
+    <string name="trending_searches">トレンド検索</string>
+    <string name="favorite">お気に入り</string>
+    <string name="language_not_supported">言語がサポートされていません</string>
+    <string name="recently_watched">最近視聴した動画</string>
+    <string name="favorites">お気に入り</string>
+    <string name="episode_progress">%1$d/%2$d</string>
+    <string name="no_recently_watched">最近視聴した映画はありません</string>
+    <string name="no_favorites">まだお気に入りの映画はありません</string>
+    <string name="spotlight">注目ドラマ</string>
+    <string name="no">いいえ</string>
+    <string name="yes">はい</string>
+    <string name="vibes_with">バイブス・ウィズ</string>
+    <string name="episode_format">エピソード %1$d/%2$d</string>
+    <string name="there_is_no_show_with_the_name_you_are_looking_for_please_try_something_else">お探しの名前の番組はありません。別の番組をお試しください。</string>
+    <string name="no_internet">インターネット接続なし</string>
+    <string name="no_internet_connection_available_due_to_network_or_service_issue_please_check_your_connection_and_reload_the_app">ネットワークまたはサービスの問題により、インターネット接続が利用できません。接続状況を確認し、アプリを再読み込みしてください。</string>
+    <string name="search_result_not_found">検索結果が見つかりませんでした</string>
+    <string name="nothing_is_here">ここには何もない</string>
+    <string name="start_watching_something_to_make_this_list_full">このリストを完成させるために何かを見始めてください</string>
+    <string name="no_subtitles_available">この映画は字幕に対応していません</string>
+
+    <string name="title_intro_1">巨大コレクション</string>
+    <string name="title_intro_2">毎日更新されるショート動画をお楽しみください</string>
+    <string name="title_intro_3">ショートパンツを救え</string>
+    <string name="title_intro_4">滑らかで楽しめる</string>
+    <string name="description_intro_1">たくさんの短編映画があなたを待っています</string>
+    <string name="description_intro_2">毎日使える高品質なショートパンツ</string>
+    <string name="description_intro_3">お気に入りのドラマをマークしてフォローしましょう</string>
+    <string name="description_intro_4">高画質でお届けします</string>
+    <string name="cannot_access_this_file">このファイルにアクセスできません</string>
+    <string name="something_went_wrong">何らかの問題が発生しました</string>
+    <string name="string_language">言語</string>
+    <string name="update_available">アップデートが利用可能です</string>
+    <string name="what_s_new">新着情報</string>
+    <string name="to_use_this_app_download_the_latest_version">このアプリを使用するには、最新バージョンをダウンロードしてください。</string>
+    <string name="update">アップデート</string>
+    <string name="retry">リトライ</string>
+    <string name="thank_you_for_taking_the_time_to_rate_us_i_m_really_appreciate_that">評価していただきありがとうございます。大変感謝しております。</string>
+    <string name="txt_language">言語</string>
+    <string name="are_you_sure_you_want_to_exit">本当に終了しますか？</string>
+    <string name="please_check_your_internet_connection_and_try_again">インターネット接続を確認して、もう一度お試しください。</string>
+    <string name="got_it">わかった</string>
+    <string name="get_started">さあ始めましょう</string>
+    <string name="history">歴史</string>
+    <string name="clear_history">履歴を消去</string>
+    <string name="rating">評価</string>
+    <string name="chat">チャット</string>
+</resources>

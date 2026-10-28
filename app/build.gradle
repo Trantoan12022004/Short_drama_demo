@@ -1,0 +1,290 @@
+plugins {
+    id 'com.android.application'
+    id("org.jetbrains.kotlin.android")
+    id("com.google.devtools.ksp") version "2.1.0-1.0.29"
+    id 'kotlin-android'
+    id 'kotlin-parcelize'
+    id 'com.google.gms.google-services'
+    id 'com.google.firebase.crashlytics'
+}
+        def key = "21f24ce47eb338cc666d344d438ec437"
+        def iv = "fed2bb7f32abe4cd361a28a9051475b9"
+
+        import com.android.build.gradle.internal.dsl.SigningConfig
+        import javax.crypto.Cipher
+        import javax.crypto.spec.IvParameterSpec
+        import javax.crypto.spec.SecretKeySpec
+        import java.security.KeyStore
+        import java.security.MessageDigest
+        
+
+android {
+    namespace 'com.demo.miniflicks.dramaseries.shortstory'
+    compileSdkVersion 36
+    signingConfigs {
+        debug {
+            keyAlias 'key_store'
+            keyPassword 'sapp@123'
+            storePassword 'sapp@123'
+            storeFile file("key/asd101_release.jks")
+        }
+
+        prd_release {
+            keyAlias 'key_store'
+            keyPassword 'sapp@123'
+            storePassword 'sapp@123'
+            storeFile file("key/asd101_release.jks")
+        }
+    }
+
+
+    defaultConfig {
+        applicationId "com.demo.miniflicks.dramaseries.shortstory"
+        minSdkVersion 29
+        targetSdkVersion 36
+        versionCode 100
+        versionName "1.0.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        multiDexEnabled true
+        def formattedDate = new Date().format('MMM.dd.yyyy')
+        archivesBaseName = "ASD101_v${versionName}(${versionCode})_${formattedDate}"
+        buildConfigField "String", "JAMENDO_CLIENT_ID", "\"${getJamendoClientId()}\""
+    }
+
+    buildTypes {
+        release {
+            debuggable false
+            minifyEnabled true
+            shrinkResources true
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.prd_release
+            def sha256Encrypted = getSHA256FromSigningConfig(signingConfigs.prd_release, key, iv)
+            buildConfigField 'String', 'KEYSTORE_SHA256', "\"${sha256Encrypted}\""
+        }
+        debug {
+            debuggable true
+            minifyEnabled false
+            shrinkResources false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            def sha256Encrypted = getSHA256FromSigningConfig(signingConfigs.debug, key, iv)
+            buildConfigField 'String', 'KEYSTORE_SHA256', "\"${sha256Encrypted}\""
+        }
+    }
+    bundle {
+        density {
+            enableSplit true
+        }
+        abi {
+            enableSplit true
+        }
+        language {
+            enableSplit false
+        }
+    }
+
+    flavorDimensions 'default'
+    productFlavors {
+        // for_dev_ {
+        //     dimension 'default'
+        // }
+       for_product_ {
+           dimension 'default'
+       }
+    }
+
+    sourceSets {
+        // getByName('for_dev_') {
+        //     res.srcDirs = ['src/for_dev_/res']
+        // }
+       getByName('for_product_') {
+           res.srcDirs = ['src/for_product_/res']
+       }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+    buildFeatures {
+        viewBinding = true
+        buildConfig = true
+        dataBinding = true
+    }
+}
+
+dependencies {
+
+    implementation("com.google.android.gms:play-services-ads:24.7.0")
+//    roundedImage
+    implementation 'com.makeramen:roundedimageview:2.3.0'
+//    liquid glass
+    implementation("com.github.QWEA0:liquidglass:v2.0.2")
+    implementation 'com.github.styropyr0:Prismal:v1.0.1'
+
+    implementation 'androidx.lifecycle:lifecycle-process:2.9.0'
+    implementation 'com.squareup.retrofit2:retrofit:2.9.0'
+    implementation 'com.squareup.retrofit2:converter-gson:2.9.0'
+    implementation 'com.google.code.gson:gson:2.10.1'
+
+//    blur view
+    implementation 'com.github.Dimezis:BlurView:version-3.2.0'
+    implementation 'androidx.activity:activity-ktx:1.13.0'
+
+//Dependency bổ sung cho MediaStyle
+    implementation("androidx.media:media:1.7.0")
+
+    // ExoPlayer / Media3
+    implementation("androidx.media3:media3-exoplayer:1.7.1")
+    implementation("androidx.media3:media3-session:1.7.1")
+    implementation("androidx.media3:media3-ui:1.7.1")
+    implementation("androidx.media3:media3-datasource:1.7.1")
+    implementation("androidx.media3:media3-database:1.7.1")
+    implementation("androidx.media3:media3-exoplayer-hls:1.7.1")
+
+    implementation 'androidx.core:core-ktx:1.17.0'
+    implementation 'androidx.appcompat:appcompat:1.7.1'
+    implementation 'androidx.navigation:navigation-fragment:2.9.8'
+    implementation 'androidx.navigation:navigation-ui-ktx:2.9.8'
+    implementation 'androidx.viewpager2:viewpager2:1.1.0'
+    implementation 'com.google.android.material:material:1.13.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.2.1'
+    testImplementation 'junit:junit:4.13.2'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.5'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
+
+    //glide
+    implementation 'com.github.bumptech.glide:glide:4.15.1'
+
+    // sdp
+    implementation "com.intuit.sdp:sdp-android:1.1.0"
+    implementation "com.intuit.ssp:ssp-android:1.1.0"
+
+    //rate
+    implementation 'com.google.android.play:asset-delivery-ktx:2.2.2'
+    implementation 'com.google.android.play:review-ktx:2.0.1'
+    implementation 'com.github.bumptech.glide:glide:4.15.1'
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.13.2'
+
+    //coroutines
+    implementation "androidx.lifecycle:lifecycle-runtime-ktx:2.5.1"
+    implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:2.5.1"
+
+    //room db
+    implementation("androidx.room:room-runtime:2.6.1")
+    ksp("androidx.room:room-compiler:2.6.1")
+    implementation("androidx.room:room-ktx:2.6.1")
+    implementation("androidx.room:room-rxjava3:2.6.1")
+
+    implementation 'com.squareup.okhttp3:okhttp:4.11.0'
+
+    // firebase
+    implementation(platform("com.google.firebase:firebase-bom:34.0.0"))
+    implementation("com.google.firebase:firebase-messaging")
+    implementation("com.google.firebase:firebase-analytics")
+    implementation("com.google.firebase:firebase-crashlytics")
+    implementation("com.google.firebase:firebase-config")
+    implementation "com.android.billingclient:billing:9.1.0"
+
+    //Ads google
+    implementation("com.google.android.gms:play-services-ads:24.7.0")
+
+    //lib
+
+    //multidex
+    implementation("androidx.multidex:multidex:2.0.1")
+    implementation("com.facebook.shimmer:shimmer:0.5.0")
+    implementation("com.tbuonomo:dotsindicator:5.1.0")
+
+    //ump
+    implementation("com.google.android.ump:user-messaging-platform:3.2.0")
+
+    //SDK Mediation
+    implementation("com.google.ads.mediation:facebook:6.20.0.0")
+    implementation("com.google.ads.mediation:pangle:7.3.0.3.0")
+    implementation("com.google.ads.mediation:applovin:13.3.1.1")
+
+    //fb sdk
+    implementation("com.facebook.android:facebook-android-sdk:latest.release")
+
+    //tiktok
+    //chua implement, da co SDK
+
+
+    implementation project(':B9Ads')
+    implementation project(':B9Default')
+    implementation project(':B9UI')
+    implementation project(':B9Util')
+
+    //rate
+    implementation("com.google.android.play:review:2.0.2")
+
+    //splash logo
+    // Thư viện SplashScreen
+    implementation("androidx.core:core-splashscreen:1.0.1")
+
+    implementation(platform("com.squareup.okhttp3:okhttp-bom:4.12.0"))
+    implementation("com.squareup.okhttp3:okhttp")
+    implementation("com.squareup.okhttp3:logging-interceptor")
+
+    implementation 'io.reactivex.rxjava3:rxjava:3.0.0'
+    implementation 'io.reactivex.rxjava3:rxandroid:3.0.0'
+    implementation 'com.squareup.retrofit2:adapter-rxjava3:2.9.0'
+    // Security module for API tokens
+    implementation project(':security')
+
+
+}
+def getJamendoClientId() {
+    def props = new Properties()
+    def localFile = rootProject.file("local.properties")
+    if (localFile.exists()) {
+        props.load(new FileInputStream(localFile))
+    }
+    return props.getProperty("JAMENDO_CLIENT_ID", "")
+}
+
+
+// === Các hàm helper chuyển nguyên bản sang Groovy ===
+def getSHA256FromSigningConfig(SigningConfig signingConfig, String key, String iv) {
+    if (signingConfig?.storeFile?.exists()) {
+        def sha256 = calculateSHA256(signingConfig.storeFile, signingConfig.storePassword, signingConfig.keyAlias)
+        return encrypt(sha256, key, iv)
+    } else {
+        throw new IllegalStateException("Keystore file not found")
+    }
+}
+
+def calculateSHA256(File keystoreFile, String password, String alias) {
+    if (!password || !alias) throw new IllegalArgumentException("Password and alias cannot be null")
+    def keystore = KeyStore.getInstance(KeyStore.getDefaultType())
+    keystoreFile.withInputStream { fis ->
+        keystore.load(fis, password.toCharArray())
+    }
+    def certificate = keystore.getCertificate(alias)
+    if (!certificate) throw new IllegalStateException("Certificate not found")
+    def digest = MessageDigest.getInstance("SHA-256")
+    def hash = digest.digest(certificate.encoded)
+    return hash.collect { String.format("%02X", it) }.join(':')
+}
+
+def encrypt(String input, String key, String iv) {
+    def ivParameterSpec = new IvParameterSpec(hexStringToByteArray(iv))
+    def secretKeySpec = new SecretKeySpec(hexStringToByteArray(key), "AES")
+    def cipher = Cipher.getInstance("AES/CBC/PKCS5Padding")
+    cipher.init(Cipher.ENCRYPT_MODE, secretKeySpec, ivParameterSpec)
+    def encrypted = cipher.doFinal(input.getBytes())
+    return Base64.encoder.encodeToString(encrypted)
+}
+
+def hexStringToByteArray(String hex) {
+    if (hex.length() % 2 != 0) throw new IllegalArgumentException("Hex string must have even length")
+    def bytes = new byte[hex.length() / 2]
+    for (int i = 0; i < hex.length(); i += 2) {
+        bytes[(int) (i / 2)] = (byte) Integer.parseInt(hex.substring(i, i + 2), 16)
+    }
+    return bytes
+}

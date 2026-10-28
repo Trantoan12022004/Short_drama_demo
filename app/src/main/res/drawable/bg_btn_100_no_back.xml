@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- LỚP 1: Viền kính ngoài (Viền mỏng bo tròn hoàn toàn 100dp) -->
+    <item>
+        <shape android:shape="rectangle">
+            <corners android:radius="40dp" />
+            <stroke
+                android:width="1.2dp"
+                android:color="#3DFFFFFF" />
+        </shape>
+    </item>
+
+    <!-- LỚP 2: Nền kính tím đen tối sẫm (Deep Dark Purple Body) -->
+
+
+
+</layer-list>

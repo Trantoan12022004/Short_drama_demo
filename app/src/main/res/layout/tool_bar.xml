@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:padding="@dimen/_12sdp">
+
+    <!-- Nút bấm bên trái (Back) -->
+    <ImageView
+        android:id="@+id/iv_leftOscar"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:background="?selectableItemBackgroundBorderless"
+        android:contentDescription="@null"
+        android:scaleType="centerInside"
+        android:src="@drawable/chevron_backward" />
+
+    <!-- Tiêu đề Toolbar chiếm toàn bộ không gian ở giữa -->
+    <com.demo.miniflicks.dramaseries.shortstory.ui.widget.GradientTextViewOscar
+        android:id="@+id/tv_tool_barOscar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:layout_marginHorizontal="@dimen/_8sdp"
+        android:ellipsize="end"
+        android:fontFamily="@font/anton_regular"
+        android:gravity="center"
+        app:gradientOrientation="topToBottom"
+        android:includeFontPadding="false"
+        android:maxLines="1"
+        android:paddingVertical="4dp"
+        android:text="@string/app_name"
+        android:textColor="@color/Orange_50"
+        android:textSize="20sp" />
+
+    <!-- Nút bấm bên phải (Action/Check) -->
+    <ImageView
+        android:id="@+id/iv_rightOscar"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:background="?selectableItemBackgroundBorderless"
+        android:contentDescription="@null"
+        android:scaleType="centerInside"
+        android:src="@drawable/check" />
+
+</LinearLayout>

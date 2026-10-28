@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clipChildren="false"
+    android:fillViewport="true"
+    android:clipToPadding="false"
+    android:paddingBottom="130dp"
+    tools:context="com.demo.miniflicks.dramaseries.shortstory.ui.home.CinemixFragment">
+
+    <!-- Layout con chuyển sang LinearLayout dọc -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:clipChildren="false"
+        android:clipToPadding="false"
+        android:orientation="vertical">
+
+        <!-- 1. Banner Carousel ViewPager2 -->
+        <androidx.viewpager2.widget.ViewPager2
+            android:id="@+id/vpBannerOscar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_12sdp"
+            android:clipChildren="false"
+            android:clipToPadding="false" />
+
+        <LinearLayout
+            android:id="@+id/layoutBannerInfoOscar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_14sdp"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+            <!-- Tên phim -->
+            <com.demo.miniflicks.dramaseries.shortstory.util.AlwaysMarqueeTextViewOscar
+                android:id="@+id/tvBannerMovieTitleOscar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/_24sdp"
+                android:ellipsize="end"
+                android:fontFamily="@font/inter_18pt_semibold"
+                android:gravity="center"
+                android:maxLines="2"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                tools:text="Avengers - Doom Day" />
+            <!-- Nút Watch Now màu vàng bo tròn -->
+            <LinearLayout
+                android:id="@+id/btnBannerWatchNowOscar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:background="@drawable/gradient_cam"
+                android:gravity="center"
+                android:paddingHorizontal="24dp"
+                android:paddingVertical="@dimen/_10sdp">
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="8dp"
+                    app:tint="@color/white"
+                    android:src="@drawable/ic_play"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/inter_18pt_semibold"
+                    android:text="@string/btn_watch_now"
+                    android:textColor="@color/white"
+                    android:textSize="16sp"/>
+            </LinearLayout>
+            
+            <LinearLayout
+                android:id="@+id/layout_chipOscar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:orientation="horizontal">
+                <ImageView
+                    android:id="@+id/chip_1Oscar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="3dp"
+                    android:src="@drawable/chip_s"/>
+
+                <ImageView
+                    android:id="@+id/chip_2Oscar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="3dp"
+                    android:src="@drawable/chip_sn"/>
+
+                <ImageView
+                    android:id="@+id/chip_3Oscar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="3dp"
+                    android:src="@drawable/chip_sn"/>
+
+                <ImageView
+                    android:id="@+id/chip_4Oscar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="3dp"
+                    android:src="@drawable/chip_sn"/>
+
+                <ImageView
+                    android:id="@+id/chip_5Oscar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="3dp"
+                    android:src="@drawable/chip_sn"/>
+            </LinearLayout>
+        </LinearLayout>
+
+
+        <!-- 2. Section Vibes -->
+        <include
+            android:id="@+id/section_vibesOscar"
+            layout="@layout/section_home"
+            android:layout_marginHorizontal="@dimen/_12sdp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_12sdp" />
+
+        <!-- 3. Danh sách Tags -->
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvTagsOscar"
+            android:layout_width="match_parent"
+            android:layout_marginHorizontal="@dimen/_12sdp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_12sdp"
+            android:orientation="horizontal"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            tools:listitem="@layout/item_tag" />
+
+        <!-- 4. Section Trending -->
+        <include
+            android:id="@+id/section_trendingOscar"
+            layout="@layout/section_home"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_12sdp"
+            android:layout_marginTop="@dimen/_12sdp" />
+
+        <!-- 5. Danh sách Trendings -->
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvTrendingsOscar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_12sdp"
+            android:orientation="horizontal"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            android:layout_marginHorizontal="@dimen/_12sdp"
+            tools:listitem="@layout/item_trending_mini" />
+
+        <!-- 4. Section New Release -->
+        <include
+            android:id="@+id/section_releaseOscar"
+            layout="@layout/section_home"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_12sdp"
+            android:layout_marginTop="@dimen/_12sdp" />
+
+        <!-- 5. Danh sách New Release -->
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_releaseOscar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_12sdp"
+            android:orientation="horizontal"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            android:layout_marginHorizontal="@dimen/_12sdp"
+            tools:listitem="@layout/item_trending_mini" />
+
+        <!-- 4. Section Spotlight Drama -->
+        <include
+            android:id="@+id/spotlightOscar"
+            layout="@layout/section_home"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_12sdp"
+            android:layout_marginTop="@dimen/_12sdp" />
+
+        <!-- 5. Danh sách Spotlight Drama -->
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_spotlightOscar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_12sdp"
+            android:orientation="horizontal"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            android:layout_marginHorizontal="@dimen/_12sdp"
+            tools:listitem="@layout/item_trending_mini" />
+
+        <include
+            android:id="@+id/movie_bestOscar"
+            layout="@layout/movie_best"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_12sdp"
+            android:layout_marginTop="@dimen/_12sdp" />
+
+    </LinearLayout>
+
+</androidx.core.widget.NestedScrollView>

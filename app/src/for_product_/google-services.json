@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "468116387926",
+    "project_id": "asd101-shortdrama",
+    "storage_bucket": "asd101-shortdrama.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:468116387926:android:4588761ac09ce2ac6463f7",
+        "android_client_info": {
+          "package_name": "com.anhtonton.dramaseries.shortstory"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDwWwaVm42BxEA-FK697detTU9FIbd6loA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:468116387926:android:8dcbf7cedc5ea38d6463f7",
+        "android_client_info": {
+          "package_name": "com.demo.miniflicks.dramaseries.shortstory"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDwWwaVm42BxEA-FK697detTU9FIbd6loA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

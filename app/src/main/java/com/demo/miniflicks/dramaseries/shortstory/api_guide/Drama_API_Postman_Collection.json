@@ -1,0 +1,290 @@
+{
+  "info": {
+    "name": "Drama API",
+    "description": "Bộ Postman Collection dành cho dự án Short Drama API. Các Header bảo mật đã được cài đặt tự động.",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Movies",
+      "item": [
+        {
+          "name": "1. Get Movies",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{BASE_URL}}/short-dram/movies",
+              "host": ["{{BASE_URL}}"],
+              "path": ["short-dram", "movies"]
+            }
+          }
+        },
+        {
+          "name": "2. Get Movies Page",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{BASE_URL}}/short-dram/movies/page?page=0&size=20",
+              "host": ["{{BASE_URL}}"],
+              "path": ["short-dram", "movies", "page"],
+              "query": [
+                {"key": "page", "value": "0"},
+                {"key": "size", "value": "20"}
+              ]
+            }
+          }
+        },
+        {
+          "name": "3. Get Top Viewed Movies",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{BASE_URL}}/short-dram/movies/top-viewed",
+              "host": ["{{BASE_URL}}"],
+              "path": ["short-dram", "movies", "top-viewed"]
+            }
+          }
+        },
+        {
+          "name": "4. Get Top Rated Movies",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{BASE_URL}}/short-dram/movies/top-rated",
+              "host": ["{{BASE_URL}}"],
+              "path": ["short-dram", "movies", "top-rated"]
+            }
+          }
+        },
+        {
+          "name": "5. Get Top Searched Movies",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{BASE_URL}}/short-dram/movies/top-searched",
+              "host": ["{{BASE_URL}}"],
+              "path": ["short-dram", "movies", "top-searched"]
+            }
+          }
+        },
+        {
+          "name": "6. Get Movies By Category",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{BASE_URL}}/short-dram/movies/by-category?name=Romance&page=0&size=20",
+              "host": ["{{BASE_URL}}"],
+              "path": ["short-dram", "movies", "by-category"],
+              "query": [
+                {"key": "name", "value": "Romance"},
+                {"key": "page", "value": "0"},
+                {"key": "size", "value": "20"}
+              ]
+            }
+          }
+        },
+        {
+          "name": "7. Get All Movies By Category",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{BASE_URL}}/short-dram/movies/by-category/all?name=Romance",
+              "host": ["{{BASE_URL}}"],
+              "path": ["short-dram", "movies", "by-category", "all"],
+              "query": [
+                {"key": "name", "value": "Romance"}
+              ]
+            }
+          }
+        },
+        {
+          "name": "8. Search Movies",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{BASE_URL}}/short-dram/movies/search?name=love&page=0&size=20",
+              "host": ["{{BASE_URL}}"],
+              "path": ["short-dram", "movies", "search"],
+              "query": [
+                {"key": "name", "value": "love"},
+                {"key": "page", "value": "0"},
+                {"key": "size", "value": "20"}
+              ]
+            }
+          }
+        },
+        {
+          "name": "9. Search All Movies",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{BASE_URL}}/short-dram/movies/search/all?name=love",
+              "host": ["{{BASE_URL}}"],
+              "path": ["short-dram", "movies", "search", "all"],
+              "query": [
+                {"key": "name", "value": "love"}
+              ]
+            }
+          }
+        },
+        {
+          "name": "13. Get Movie Detail",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{BASE_URL}}/short-dram/movies/1",
+              "host": ["{{BASE_URL}}"],
+              "path": ["short-dram", "movies", "1"]
+            }
+          }
+        },
+        {
+          "name": "14. Get Movie Episode Preview",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{BASE_URL}}/short-dram/movies/1/episodes/preview",
+              "host": ["{{BASE_URL}}"],
+              "path": ["short-dram", "movies", "1", "episodes", "preview"]
+            }
+          }
+        },
+        {
+          "name": "17. Get Movie By Legacy ID",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{BASE_URL}}/short-dram/movies/legacy/movie-001",
+              "host": ["{{BASE_URL}}"],
+              "path": ["short-dram", "movies", "legacy", "movie-001"]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "Categories",
+      "item": [
+        {
+          "name": "10. Get Category Names",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{BASE_URL}}/short-dram/categories/names",
+              "host": ["{{BASE_URL}}"],
+              "path": ["short-dram", "categories", "names"]
+            }
+          }
+        },
+        {
+          "name": "11. Get Category Movies",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{BASE_URL}}/short-dram/categories/movies",
+              "host": ["{{BASE_URL}}"],
+              "path": ["short-dram", "categories", "movies"]
+            }
+          }
+        },
+        {
+          "name": "12. Get Category Movies Page",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{BASE_URL}}/short-dram/categories/movies/page?page=0&size=20",
+              "host": ["{{BASE_URL}}"],
+              "path": ["short-dram", "categories", "movies", "page"],
+              "query": [
+                {"key": "page", "value": "0"},
+                {"key": "size", "value": "20"}
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "Episodes (Unlock)",
+      "item": [
+        {
+          "name": "15. Unlock Episode",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "url": {
+              "raw": "{{BASE_URL}}/short-dram/episodes/101/unlock",
+              "host": ["{{BASE_URL}}"],
+              "path": ["short-dram", "episodes", "101", "unlock"]
+            }
+          }
+        },
+        {
+          "name": "16. Unlock Episodes",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "[\n  101,\n  102,\n  103\n]",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{BASE_URL}}/short-dram/episodes/unlock",
+              "host": ["{{BASE_URL}}"],
+              "path": ["short-dram", "episodes", "unlock"]
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "event": [
+    {
+      "listen": "prerequest",
+      "script": {
+        "type": "text/javascript",
+        "exec": [
+          "pm.request.headers.add({key: 'X-Api-Key-Token', value: pm.collectionVariables.get('API_KEY_TOKEN')});",
+          "pm.request.headers.add({key: 'X-Package-Name', value: pm.collectionVariables.get('PACKAGE_NAME')});"
+        ]
+      }
+    }
+  ],
+  "variable": [
+    {
+      "key": "BASE_URL",
+      "value": "https://shortdrama-data.v1solution.com",
+      "type": "string"
+    },
+    {
+      "key": "API_KEY_TOKEN",
+      "value": "your_api_key_token_here",
+      "type": "string"
+    },
+    {
+      "key": "PACKAGE_NAME",
+      "value": "com.cck.dramareels.watchdrama",
+      "type": "string"
+    }
+  ]
+}
