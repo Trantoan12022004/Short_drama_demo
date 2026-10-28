@@ -23,30 +23,28 @@ jobs:
           java-version: '21'
           cache: gradle
 
-      - name: 3. Setup Android SDK
-        uses: android-actions/setup-android@v3
-
-      - name: 4. Create local.properties
+      - name: 3. Create local.properties
         run: |
-          echo "sdk.dir=$ANDROID_HOME" > local.properties
-          echo "JAMENDO_CLIENT_ID=${{ secrets.JAMENDO_CLIENT_ID || 'f2d12b98' }}" >> local.properties
+          echo "JAMENDO_CLIENT_ID=${{ secrets.JAMENDO_CLIENT_ID || 'f2d12b98' }}" > local.properties
 
-      - name: 5. Grant execute permission for gradlew
-        run: chmod +x gradlew
+      - name: 4. Grant execute permission for gradlew
+        run: |
+          sed -i 's/\r$//' gradlew
+          chmod +x gradlew
 
-      - name: 6. Build Release APK & AAB (for_product_)
+      - name: 5. Build Release APK & AAB (for_product_)
         run: |
           ./gradlew clean
           ./gradlew assembleFor_product_Release bundleFor_product_Release --stacktrace
 
-      - name: 7. Upload Release APK Artifact
+      - name: 6. Upload Release APK Artifact
         uses: actions/upload-artifact@v4
         with:
           name: App-Release-APK
           path: app/build/outputs/apk/for_product_/release/*.apk
           retention-days: 14
 
-      - name: 8. Upload Release AAB Artifact (Google Play Store)
+      - name: 7. Upload Release AAB Artifact (Google Play Store)
         uses: actions/upload-artifact@v4
         with:
           name: App-Release-AAB
