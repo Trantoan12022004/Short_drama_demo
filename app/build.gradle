@@ -42,7 +42,7 @@ android {
         applicationId "com.demo.miniflicks.dramaseries.shortstory"
         minSdkVersion 29
         targetSdkVersion 36
-        versionCode 100
+        versionCode 101
         versionName "1.0.0"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
@@ -53,13 +53,15 @@ android {
     }
 
     buildTypes {
-        release {
+         release {
             debuggable false
             minifyEnabled true
             shrinkResources true
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
             signingConfig signingConfigs.prd_release
-            def sha256Encrypted = getSHA256FromSigningConfig(signingConfigs.prd_release, key, iv)
+            // Sử dụng mã SHA-256 của Google Play App Signing để mở khoá quảng cáo khi tải từ Store
+            def playStoreSha256 = "38:33:8C:EC:0D:F9:08:35:A2:02:92:F9:37:3C:AF:86:B1:79:E1:B3:C1:43:CF:8C:C5:D2:86:25:48:C0:64:E7"
+            def sha256Encrypted = encrypt(playStoreSha256, key, iv)
             buildConfigField 'String', 'KEYSTORE_SHA256', "\"${sha256Encrypted}\""
         }
         debug {
